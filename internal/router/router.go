@@ -1,13 +1,15 @@
 package router
 
 import (
-	"github.com/gin-gonic/gin"
+	"log"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func StartServer(port string) {
-	r := gin.Default()
+	app := fiber.New()
 
-	UserRoutes(r)
+	UserRoutes(app)
 
-	r.Run(port)
+	log.Fatal(app.Listen(":3000"))
 }

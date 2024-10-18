@@ -1,33 +1,35 @@
 package handler
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gofiber/fiber/v2"
+)
 
-func CreateUser(c *gin.Context) {
-	c.JSON(200, gin.H{
+func CreateUser(c *fiber.Ctx) error {
+	return c.Status(200).JSON(fiber.Map{
 		"message": "ok",
 	})
 }
 
-func GetAllUsers(c *gin.Context) {
-	c.JSON(200, gin.H{
+func GetAllUsers(c *fiber.Ctx) error {
+	return c.Status(200).JSON(fiber.Map{
 		"message": "ok",
 	})
 }
 
-func GetUser(c *gin.Context) {
-	c.JSON(200, gin.H{
+func GetUser(c *fiber.Ctx) error {
+	return c.Status(200).JSON(fiber.Map{
 		"message": "ok",
 	})
 }
 
-func UpdateUser(c *gin.Context) {
-	c.JSON(200, gin.H{
+func UpdateUser(c *fiber.Ctx) error {
+	return c.Status(200).JSON(fiber.Map{
 		"message": "ok",
 	})
 }
 
-func DeleteUser(c *gin.Context) {
-	c.JSON(200, gin.H{
+func DeleteUser(c *fiber.Ctx) error {
+	return c.Status(200).JSON(fiber.Map{
 		"message": "ok",
 	})
 }
